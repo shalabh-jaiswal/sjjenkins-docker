@@ -27,9 +27,9 @@ VOLUME "$USER_HOME_DIR/.m2"
 
 # install Gradle
 ENV GRADLE_HOME /gradle
-ENV GRADLE_VERSION 3.5
+ENV GRADLE_VERSION 5.2.1
 
-ARG GRADLE_DOWNLOAD_SHA256=0b7450798c190ff76b9f9a3d02e18b33d94553f708ebc08ebe09bdf99111d110
+ARG GRADLE_DOWNLOAD_SHA256=9dc729f6dbfbbc4df1692665d301e028976dacac296a126f16148941a9cf012e
 RUN set -o errexit -o nounset \
 	&& echo "Downloading Gradle" \
 	&& wget --no-verbose --output-document=gradle.zip "https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip" \
