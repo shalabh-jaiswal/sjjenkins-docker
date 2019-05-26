@@ -5,10 +5,10 @@ MAINTAINER Shalabh Jaiswal
 USER root
 
 # install maven
-ARG MAVEN_VERSION=3.5.0
+ARG MAVEN_VERSION=3.6.1
 ARG USER_HOME_DIR="/root"
-ARG SHA=beb91419245395bd69a4a6edad5ca3ec1a8b64e41457672dc687c173a495f034
-ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/${MAVEN_VERSION}/binaries
+ARG SHA=b4880fb7a3d81edd190a029440cdf17f308621af68475a4fe976296e71ff4a4b546dd6d8a58aaafba334d309cc11e638c52808a4b0e818fc0fd544226d952544
+ARG BASE_URL=http://mirror.reverse.net/pub/apache/maven/maven-3/${MAVEN_VERSION}/binaries
 
 RUN mkdir -p /maven /maven/ref \
   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-$MAVEN_VERSION-bin.tar.gz \
