@@ -7,7 +7,7 @@ USER root
 # install maven
 ARG MAVEN_VERSION=3.6.1
 ARG USER_HOME_DIR="/root"
-ARG SHA=b4880fb7a3d81edd190a029440cdf17f308621af68475a4fe976296e71ff4a4b546dd6d8a58aaafba334d309cc11e638c52808a4b0e818fc0fd544226d952544
+ARG SHA="2528c35a99c30f8940cc599ba15d34359d58bec57af58c1075519b8cd33b69e7"
 ARG BASE_URL=http://mirror.reverse.net/pub/apache/maven/maven-3/${MAVEN_VERSION}/binaries
 
 RUN mkdir -p /maven /maven/ref \
@@ -29,7 +29,7 @@ VOLUME "$USER_HOME_DIR/.m2"
 ENV GRADLE_HOME /gradle
 ENV GRADLE_VERSION 5.2.1
 
-ARG GRADLE_DOWNLOAD_SHA256=9dc729f6dbfbbc4df1692665d301e028976dacac296a126f16148941a9cf012e
+ARG GRADLE_DOWNLOAD_SHA256=748c33ff8d216736723be4037085b8dc342c6a0f309081acf682c9803e407357
 RUN set -o errexit -o nounset \
 	&& echo "Downloading Gradle" \
 	&& wget --no-verbose --output-document=gradle.zip "https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip" \
